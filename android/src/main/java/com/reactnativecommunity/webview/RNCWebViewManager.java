@@ -126,7 +126,7 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
   protected static final String REACT_CLASS = "RNCWebView";
   protected static final String HTML_ENCODING = "UTF-8";
   protected static final String HTML_MIME_TYPE = "text/html";
-  protected static final String JAVASCRIPT_INTERFACE = "ReactNativeWebView";
+  protected static final String JAVASCRIPT_INTERFACE = "Android"; // changed from ReactNativeWebView
   protected static final String HTTP_METHOD_POST = "POST";
   // Use `webView.loadUrl("about:blank")` to reliably reset the view
   // state and release page resources (including any running JavaScript).
@@ -1256,7 +1256,7 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
        * - window[JAVASCRIPT_INTERFACE].postMessage
        */
       @JavascriptInterface
-      public void postMessage(String message) {
+      public void onJson(String message) {
         mContext.onMessage(message);
       }
     }
