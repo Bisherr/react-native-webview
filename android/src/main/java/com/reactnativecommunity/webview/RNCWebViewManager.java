@@ -1259,6 +1259,11 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
       public void onJson(String message) {
         mContext.onMessage(message);
       }
+      
+      @JavascriptInterface
+      public void postMessage(String message) {
+        mContext.onMessage(message);
+      }
     }
 
     protected static class ProgressChangedFilter {
